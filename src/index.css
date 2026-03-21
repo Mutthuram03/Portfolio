@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium Light Mode */
+    --background: 0 0% 100%;       /* Pure White */
+    --foreground: 0 0% 5%;         /* Practically Black for text */
+
+    --card: 0 0% 100%;             /* White cards */
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 40 95% 45%;         /* Darker Gold for visibility on white */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 96%;       /* Very light warm grey */
+    --secondary-foreground: 40 95% 45%;
+
+    --accent: 40 20% 96%;          /* Low contrast accent for hover states */
+    --accent-foreground: 40 95% 45%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;            /* Subtle light grey border */
+    --input: 0 0% 90%;
+    --ring: 40 95% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary-start: 40 95% 55%;
+    --gradient-primary-end: 30 90% 45%;
+    --gradient-secondary-start: 30 90% 45%;
+    --gradient-secondary-end: 20 80% 35%;
+    
+    --glow-primary: 40 95% 55%;
+    --glow-secondary: 30 90% 45%;
+    --glow-accent: 20 80% 35%;
+  }
+
+  .dark {
+    /* Premium Realistic Pure Black & Honey Gold Theme */
+    --background: 0 0% 0%;       /* Pure Black */
+    --foreground: 40 20% 90%;    /* Warm white */
+
+    --card: 0 0% 4%;             /* Deepest Grey for cards */
+    --card-foreground: 40 20% 90%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 40 95% 55%;       /* Honey Gold */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 8%;        /* Dark grey for secondary elements */
+    --secondary-foreground: 40 95% 55%;
+
+    --accent: 0 0% 8%;
+    --accent-foreground: 40 95% 55%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 90%;
+
+    --border: 40 95% 55%;        /* Honey Gold borders */
+    --input: 40 95% 55%;
+    --ring: 40 95% 55%;
+
+
+    --gradient-primary-start: 40 95% 55%;
+    --gradient-primary-end: 30 90% 45%;
+    --gradient-secondary-start: 30 90% 45%;
+    --gradient-secondary-end: 20 80% 35%;
+    
+    --glow-primary: 40 95% 55%;
+    --glow-secondary: 30 90% 45%;
+    --glow-accent: 20 80% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply text-foreground;
+  }
+
+  .gradient-bg {
+    @apply bg-muted/30;
+  }
+
+  .glass-effect {
+    @apply bg-card/40 backdrop-blur-xl border border-foreground/20 rounded-2xl;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 15px hsl(0 0% 30% / 0.2),
+                0 0 30px hsl(0 0% 20% / 0.1);
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
