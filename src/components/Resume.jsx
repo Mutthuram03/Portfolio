@@ -97,7 +97,7 @@ const Resume = () => {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/16VbywDwez3Ib_bwf3mPDX05I15aerJaD/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qDb1b6-sShwdNXWXFhKi22J1JIujW1FD/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
