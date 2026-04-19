@@ -18,6 +18,26 @@ const Projects = () => {
   });
 
   const projects = [
+    {
+      title: "Project Title Placeholder 1",
+      duration: "Add Duration",
+      description: "Add your project summary here. Mention the problem, your approach, and key impact in 2-3 lines.",
+      tags: ["Tech 1", "Tech 2", "Tech 3"],
+      github: "https://github.com/your-username/project-1",
+      youtube: "https://your-demo-link.com/project-1",
+      gradient: "from-lime-500 to-emerald-600",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Project Title Placeholder 2",
+      duration: "Add Duration",
+      description: "Add your project summary here. Include what you built, your role, and standout features for recruiters.",
+      tags: ["Tech 1", "Tech 2", "Tech 3"],
+      github: "https://github.com/your-username/project-2",
+      youtube: "https://your-demo-link.com/project-2",
+      gradient: "from-sky-500 to-indigo-600",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60",
+    },
      {
       title: "FarmStack",
       duration: "Jan 2026- Feb 2026",
@@ -96,26 +116,6 @@ const Projects = () => {
       github: "https://github.com/Mutthuram03/Portfolio.git",
       gradient: "from-pink-500 to-rose-600",
       image: portfolioImg,
-    },
-    {
-      title: "Project Title Placeholder 1",
-      duration: "Add Duration",
-      description: "Add your project summary here. Mention the problem, your approach, and key impact in 2-3 lines.",
-      tags: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/your-username/project-1",
-      youtube: "https://your-demo-link.com/project-1",
-      gradient: "from-lime-500 to-emerald-600",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60",
-    },
-    {
-      title: "Project Title Placeholder 2",
-      duration: "Add Duration",
-      description: "Add your project summary here. Include what you built, your role, and standout features for recruiters.",
-      tags: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/your-username/project-2",
-      youtube: "https://your-demo-link.com/project-2",
-      gradient: "from-sky-500 to-indigo-600",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60",
     },
    
   ];
